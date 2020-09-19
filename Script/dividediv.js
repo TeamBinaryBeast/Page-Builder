@@ -14,11 +14,14 @@ function addElement(){
     subDiv.append(span);
     mainDiv.append(subDiv);
     display.append(mainDiv);
-    console.log("running");
     buttonID++;
 }
 
 function addColumn(getSpan) {
+    var width1 = prompt("Width of first column in %:");
+    var width2 = prompt("Width of second column in %:");
+    width1 = parseInt(width1);
+    width2 = parseInt(width2);
     var getID = getSpan.className;
     var getElement = document.getElementById(getID);
     getElement.innerHTML = '';
@@ -30,8 +33,10 @@ function addColumn(getSpan) {
     var span2 = document.createElement("span");
     var plus1 = document.createTextNode("+");
     var plus2 = document.createTextNode("+");
-    mainDiv1.setAttribute("class", "main-container half-box");
-    mainDiv2.setAttribute("class", "main-container half-box");
+    mainDiv1.setAttribute("class", "main-container");
+    mainDiv1.setAttribute("style", "width: " + width1 + "%;");
+    mainDiv2.setAttribute("class", "main-container");
+    mainDiv2.setAttribute("style", "width: " + width2 + "%;");
     mainDiv1.setAttribute("id", "button" + buttonID);
     subDiv1.setAttribute("class", "sub-container");
     span1.setAttribute("class", "button" + buttonID);
@@ -51,11 +56,5 @@ function addColumn(getSpan) {
     mainDiv2.append(subDiv2);
     getElement.append(mainDiv1);
     getElement.append(mainDiv2);
-    console.log("running");
-    
 }
-
-// function setHeight(){
-
-// }
 
