@@ -26,8 +26,7 @@ function addElement(){
 
 function addColumn(getSpan) {
 
-    var width1 = prompt("Width of first column in %:");
-    var width2 = prompt("Width of second column in %:");
+    displayModal();
 
     width1 = parseInt(width1);
     width2 = parseInt(width2);
@@ -92,7 +91,7 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function () {
+function displayModal() {
     modal.style.display = "block";
 }
 

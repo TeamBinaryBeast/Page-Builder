@@ -32,5 +32,6 @@
 .close:hover,
 .close:focus {color: black; text-decoration: none; cursor: pointer;}
 
-.modalSave {margin-top: 15px; border: none; background-color: orange; padding: 7px 30px; border-radius: 15px; color: black; font-size: 18px; text-align: center;}
+.modalSave {cursor: pointer; margin-top: 15px; border: none; background-color: orange; padding: 7px 30px; border-radius: 15px; color: black; font-size: 18px; text-align: center;}
 .modalSave:focus {outline: none;}
+.modalSave:hover {background-color: rgb(255, 171, 16);}
