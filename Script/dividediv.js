@@ -1,5 +1,5 @@
 var buttonID = 1;
-function addelement(){
+function addElement(){
     var display = document.getElementById('display');
     var mainDiv = document.createElement("div");
     var subDiv = document.createElement("div");
@@ -9,7 +9,7 @@ function addelement(){
     mainDiv.setAttribute("id", "button" + buttonID);
     subDiv.setAttribute("class", "sub-container");
     span.setAttribute("class", "button" + buttonID);
-    span.setAttribute("onclick", "addcolumn(this)");
+    span.setAttribute("onclick", "addColumn(this)");
     span.appendChild(plus);
     subDiv.append(span);
     mainDiv.append(subDiv);
@@ -18,7 +18,7 @@ function addelement(){
     buttonID++;
 }
 
-function addcolumn(getSpan) {
+function addColumn(getSpan) {
     var getID = getSpan.className;
     var getElement = document.getElementById(getID);
     getElement.innerHTML = '';
@@ -35,13 +35,13 @@ function addcolumn(getSpan) {
     mainDiv1.setAttribute("id", "button" + buttonID);
     subDiv1.setAttribute("class", "sub-container");
     span1.setAttribute("class", "button" + buttonID);
-    span1.setAttribute("onclick", "addcolumn(this)");
+    span1.setAttribute("onclick", "addColumn(this)");
     span1.appendChild(plus1);
     buttonID++;
     mainDiv2.setAttribute("id", "button" + buttonID);
     subDiv2.setAttribute("class", "sub-container");
     span2.setAttribute("class", "button" + buttonID);
-    span2.setAttribute("onclick", "addcolumn(this)");
+    span2.setAttribute("onclick", "addColumn(this)");
     span2.appendChild(plus2);
     buttonID++;
     
@@ -54,4 +54,8 @@ function addcolumn(getSpan) {
     console.log("running");
     
 }
+
+// function setHeight(){
+
+// }
 
