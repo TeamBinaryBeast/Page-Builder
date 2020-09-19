@@ -10,15 +10,30 @@
     <main>
         <div class="wrapper">
             <div class="sidebar">
-                <button class="adddiv" onclick="addelement()">Add Div +</button>
+                <button class="addDiv" onclick="addElement()">Add Div +</button>
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn">Open Modal</button>
                 <button class="export" onclick="exportAsHtml()">Export As Html</button>
             </div>
-            <div class="display" id="display"></div>
+            <div class="display" id="display">
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">Cancel</span>
+                <label for="width1">Width 1:</label><br>
+                <input type="range" min="0" max="100"><span></span><br><br>
+                <label for="width2">Width 2:</label><br>
+                <input type="range" min="0" max="100"><span></span><br>
+                <button class="modalSave">Save</button>
+            </div>
         </div>
     </main>
 
 
-    <script src="./Script/script.js"></script>
+    <script src="./Script/dividediv.js"></script>
 
     <!-- For Export Function -->
     <script src="./Script/export.js"></script>
