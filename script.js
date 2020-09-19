@@ -28,7 +28,7 @@ function addcolumn(getSpan) {
     var subDiv2 = document.createElement("div");
     var span1 = document.createElement("span");
     var span2 = document.createElement("span");
-    var plus1 = document.createTextNode("+");
+    var plus1 = document.createTextNode("+")
     var plus2 = document.createTextNode("+");
     mainDiv1.setAttribute("class", "main-container half-box");
     mainDiv2.setAttribute("class", "main-container half-box");
