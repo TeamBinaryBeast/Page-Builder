@@ -1,20 +1,27 @@
 var buttonID = 1;
 function addElement(){
+
     var display = document.getElementById('display');
     var mainDiv = document.createElement("div");
     var subDiv = document.createElement("div");
     var span = document.createElement("span");
     var plus = document.createTextNode("+")
+
     mainDiv.setAttribute("class", "main-container");
     mainDiv.setAttribute("id", "button" + buttonID);
+    
     subDiv.setAttribute("class", "sub-container");
+
     span.setAttribute("class", "button" + buttonID);
     span.setAttribute("onclick", "addColumn(this)");
+
     span.appendChild(plus);
     subDiv.append(span);
     mainDiv.append(subDiv);
     display.append(mainDiv);
+
     buttonID++;
+
 }
 
 function addColumn(getSpan) {
@@ -67,8 +74,9 @@ function addColumn(getSpan) {
 
     mainDiv1.append(subDiv1);
     mainDiv2.append(subDiv2);
-    
+
     getElement.append(mainDiv1);
     getElement.append(mainDiv2);
+
 }
 
