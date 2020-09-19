@@ -4,11 +4,12 @@ function addelement(){
     var mainDiv = document.createElement("div");
     var subDiv = document.createElement("div");
     var span = document.createElement("span");
-    var plus = document.createTextNode("+")
+    var plus = document.createTextNode("+");
     mainDiv.setAttribute("class", "main-container");
     mainDiv.setAttribute("id", "button" + buttonID);
     subDiv.setAttribute("class", "sub-container");
     span.setAttribute("class", "button" + buttonID);
+    span.setAttribute("id", "btn");
     span.setAttribute("onclick", "addcolumn(this)");
     span.appendChild(plus);
     subDiv.append(span);
