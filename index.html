@@ -17,9 +17,9 @@
             <div class="display" id="display">
             </div>
         </div>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
+        <!-- Modal for Column-->
+        <div id="myModal1" class="modal">
+            <!-- Column Modal content -->
             <div class="modal-content">
                 <span class="close">Cancel</span>
                 <label for="width1">Width 1:</label><br>
@@ -27,6 +27,18 @@
                 <label for="width2">Width 2:</label><br>
                 <input type="range" min="0" max="100" id="width2" onchange="widthRange(this)"><span id="w2">50%</span><br>
                 <button class="modalSave" onclick="addColumn()">Save</button>
+            </div>
+        </div>
+        <!-- Modal for Row -->
+        <div id="myModal2" class="modal">
+            <!-- Row Modal content -->
+            <div class="modal-content">
+                <span class="close">Cancel</span>
+                <label class="divideChooseTitle">Divde by</label>
+                <div class="modalDividerButton">
+                    <button onclick="addRow()" class="rowButton">Row</button>
+                    <button onclick="displayModal1()" class="columnButton">Column</button>
+                </div>
             </div>
         </div>
     </main>
