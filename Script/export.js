@@ -27,19 +27,4 @@ function replicate() {
     finalExp(fixedHTML);
 }
 
-function createExpo(fixedHTML) {
-    var Div = document.createElement("div");
-    var node = document.createTextNode(fixedHTML);
-    Div.appendChild(node);
-    document.getElementsByClassName('sidebar')[0].appendChild(Div).setAttribute("id", "FinalExp");
-}
 
-function finalExp(fixedHTML) {
-    try {
-        var Div = document.getElementById("FinalExp");
-        Div.remove();
-        createExpo(fixedHTML)
-    } catch (pass) {
-        createExpo(fixedHTML)
-    }
-}
