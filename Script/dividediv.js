@@ -17,7 +17,7 @@ function addElement(){
     subDiv.setAttribute("class", "sub-container");
 
     span.setAttribute("class", "button" + buttonID);
-    span.setAttribute("onclick", "displayModal2(this)");
+    span.setAttribute("onclick", "displayModal3(this)");
 
     span.appendChild(plus);
     subDiv.append(span);
@@ -64,14 +64,14 @@ function addColumn() {
     mainDiv1.setAttribute("id", "button" + buttonID);
     subDiv1.setAttribute("class", "sub-container");
     span1.setAttribute("class", "button" + buttonID);
-    span1.setAttribute("onclick", "displayModal2(this)");
+    span1.setAttribute("onclick", "displayModal3(this)");
     span1.appendChild(plus1);
     buttonID++;
 
     mainDiv2.setAttribute("id", "button" + buttonID);
     subDiv2.setAttribute("class", "sub-container");
     span2.setAttribute("class", "button" + buttonID);
-    span2.setAttribute("onclick", "displayModal2(this)");
+    span2.setAttribute("onclick", "displayModal3(this)");
     span2.appendChild(plus2);
     buttonID++;
     
@@ -110,7 +110,7 @@ function addRow(){
         subDiv.setAttribute("class", "sub-container");
 
         span.setAttribute("class", "button" + buttonID);
-        span.setAttribute("onclick", "displayModal2(this)");
+        span.setAttribute("onclick", "displayModal3(this)");
 
         span.appendChild(plus);
         subDiv.append(span);
@@ -146,15 +146,39 @@ function widthRange(modalInput){
 
 }
 
+function addComponent() {
+
+    var imgLink = prompt("Source Link of the image:");
+
+    modal4.style.display = "none";
+
+    var getID = getSpan.className;
+    var getElement = document.getElementById(getID);
+
+    getElement.innerHTML = '';
+
+    var image = document.createElement("img");
+
+    image.setAttribute("src", imgLink);
+    image.setAttribute("width", "100%");
+
+    getElement.append(image);
+
+}
+
 //modal
 
 // Get the modal
 var modal1 = document.getElementById("myModal1");
 var modal2 = document.getElementById("myModal2");
+var modal3 = document.getElementById("myModal3");
+var modal4 = document.getElementById("myModal4");
 
 // Get the <span> element that closes the modal
 var cancel1 = document.getElementsByClassName("close")[0];
 var cancel2 = document.getElementsByClassName("close")[1];
+var cancel3 = document.getElementsByClassName("close")[2];
+var cancel4 = document.getElementsByClassName("close")[3];
 
 // When the user clicks on the button, open the modal
 function displayModal1() {
@@ -162,9 +186,20 @@ function displayModal1() {
     modal1.style.display = "block";
 }
 
-function displayModal2(getValue) {
+function displayModal2() {
+    modal3.style.display = "none";
     modal2.style.display = "block";
+}
+
+function displayModal3(getValue) {
+    modal3.style.display = "block";
     getSpan = getValue;
+}
+
+function displayModal4() {
+    modal3.style.display = "none";
+    modal4.style.display = "block";
+
 }
 
 // When the user clicks on <span> (cancel), close the modal
@@ -182,6 +217,14 @@ cancel2.onclick = function () {
     modal2.style.display = "none";
 }
 
+cancel3.onclick = function () {
+    modal3.style.display = "none";
+}
+
+cancel4.onclick = function () {
+    modal4.style.display = "none";
+}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal1) {
@@ -192,9 +235,12 @@ window.onclick = function (event) {
         document.getElementById('w2').innerHTML = 50 + '%';
         width1 = 50;
         width2 = 50;
-    }
-    if (event.target == modal2) {
+    } else if (event.target == modal2) {
         modal2.style.display = "none";
+    } else if (event.target == modal3) {
+        modal3.style.display = "none";
+    } else if (event.target == modal4) {
+        modal4.style.display = "none";
     }
 }
 

@@ -37,6 +37,12 @@
 .modalSave:hover {background-color: rgb(255, 171, 16);}
 
 .modalDividerButton {display: flex; flex-wrap: wrap; justify-content: center; align-items: center;}
-.rowButton {cursor: pointer; margin-top: 25px 15px; border: none; background-color: orange; padding: 7px 30px; border-radius: 15px; color: black; font-size: 18px; text-align: center;}
-.columnButton {cursor: pointer; margin: 25px 15px; border: none; background-color: orange; padding: 7px 30px; border-radius: 15px; color: black; font-size: 18px; text-align: center;}
+.modBtn {cursor: pointer; margin: 25px 15px; border: none; background-color: orange; padding: 7px 30px; border-radius: 15px; color: black; font-size: 18px; text-align: center;}
+.modBtn:focus {outline: none;}
+.modBtn:hover {background-color: rgb(255, 171, 16);}
+
+.componentBtn {cursor: pointer; margin: 15px; height: 150px; width: 150px; border: none; background-color: orange; padding: 7px 30px; border-radius: 15px; color: black; font-size: 18px; text-align: center;}
+.componentBtn:focus {outline: none;}
+.componentBtn:hover {background-color: rgb(255, 171, 16);}
+
 .divideChooseTitle {color: skyblue}
