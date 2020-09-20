@@ -1,4 +1,4 @@
-var buttonID = 1;
+var containerID = 1;
 var getSpan;
 var width1 = 50;
 var width2 = 50;
@@ -12,11 +12,11 @@ function addElement(){
     var plus = document.createTextNode("+")
 
     mainDiv.setAttribute("class", "main-container");
-    mainDiv.setAttribute("id", "button" + buttonID);
+    mainDiv.setAttribute("id", "container" + containerID);
 
     subDiv.setAttribute("class", "sub-container");
 
-    span.setAttribute("class", "button" + buttonID);
+    span.setAttribute("class", "container" + containerID);
     span.id = "btn"; // For removing purpose
     span.setAttribute("onclick", "displayModal3(this)");
 
@@ -25,7 +25,7 @@ function addElement(){
     mainDiv.append(subDiv);
     display.append(mainDiv);
 
-    buttonID++;
+    containerID++;
 
 }
 
@@ -62,21 +62,21 @@ function addColumn() {
     mainDiv2.setAttribute("class", "main-container");
     mainDiv2.setAttribute("style", "width: " + width2 + "%;");
 
-    mainDiv1.setAttribute("id", "button" + buttonID);
+    mainDiv1.setAttribute("id", "container" + containerID);
     subDiv1.setAttribute("class", "sub-container");
-    span1.setAttribute("class", "button" + buttonID);
+    span1.setAttribute("class", "container" + containerID);
     span1.id = "btn"; // For removing purpose
     span1.setAttribute("onclick", "displayModal3(this)");
     span1.appendChild(plus1);
-    buttonID++;
+    containerID++;
 
-    mainDiv2.setAttribute("id", "button" + buttonID);
+    mainDiv2.setAttribute("id", "container" + containerID);
     subDiv2.setAttribute("class", "sub-container");
-    span2.setAttribute("class", "button" + buttonID);
+    span2.setAttribute("class", "container" + containerID);
     span2.id = "btn"; // For removing purpose
     span2.setAttribute("onclick", "displayModal3(this)");
     span2.appendChild(plus2);
-    buttonID++;
+    containerID++;
     
     subDiv1.append(span1);
     subDiv2.append(span2);
@@ -108,11 +108,11 @@ function addRow(){
         var plus = document.createTextNode("+")
 
         mainDiv.setAttribute("class", "main-container");
-        mainDiv.setAttribute("id", "button" + buttonID);
+        mainDiv.setAttribute("id", "container" + containerID);
 
         subDiv.setAttribute("class", "sub-container");
 
-        span.setAttribute("class", "button" + buttonID);
+        span.setAttribute("class", "container" + containerID);
         span.id = "btn"; // For removing purpose
         span.setAttribute("onclick", "displayModal3(this)");
 
@@ -121,7 +121,7 @@ function addRow(){
         mainDiv.append(subDiv);
         getElement.append(mainDiv);
 
-        buttonID++;
+        containerID++;
     }
 
 }
@@ -184,7 +184,7 @@ var cancel2 = document.getElementsByClassName("close")[1];
 var cancel3 = document.getElementsByClassName("close")[2];
 var cancel4 = document.getElementsByClassName("close")[3];
 
-// When the user clicks on the button, open the modal
+// When the user clicks on the container, open the modal
 function displayModal1() {
     modal2.style.display = "none";
     modal1.style.display = "block";
