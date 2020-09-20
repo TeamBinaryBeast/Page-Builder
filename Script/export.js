@@ -31,7 +31,7 @@ function createExpo(fixedHTML) {
     var Div = document.createElement("div");
     var node = document.createTextNode(fixedHTML);
     Div.appendChild(node);
-    document.getElementsByClassName('sidebar')[0].appendChild(Div).setAttribute("id", "FinalExp");
+    showMeAfter('sidebar',Div);
 }
 
 function finalExp(fixedHTML) {
@@ -42,4 +42,7 @@ function finalExp(fixedHTML) {
     } catch (pass) {
         createExpo(fixedHTML)
     }
+}
+function showMeAfter(where, RawHtml) {
+    document.getElementById(where).appendChild(RawHtml).setAttribute("id", "FinalExp");
 }
