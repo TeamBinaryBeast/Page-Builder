@@ -17,6 +17,7 @@ function addElement(){
     subDiv.setAttribute("class", "sub-container");
 
     span.setAttribute("class", "button" + buttonID);
+    span.id = "btn"; // For removing purpose
     span.setAttribute("onclick", "displayModal3(this)");
 
     span.appendChild(plus);
