@@ -65,6 +65,7 @@ function addColumn() {
     mainDiv1.setAttribute("id", "button" + buttonID);
     subDiv1.setAttribute("class", "sub-container");
     span1.setAttribute("class", "button" + buttonID);
+    span1.id = "btn"; // For removing purpose
     span1.setAttribute("onclick", "displayModal3(this)");
     span1.appendChild(plus1);
     buttonID++;
@@ -72,6 +73,7 @@ function addColumn() {
     mainDiv2.setAttribute("id", "button" + buttonID);
     subDiv2.setAttribute("class", "sub-container");
     span2.setAttribute("class", "button" + buttonID);
+    span2.id = "btn"; // For removing purpose
     span2.setAttribute("onclick", "displayModal3(this)");
     span2.appendChild(plus2);
     buttonID++;
@@ -111,6 +113,7 @@ function addRow(){
         subDiv.setAttribute("class", "sub-container");
 
         span.setAttribute("class", "button" + buttonID);
+        span.id = "btn"; // For removing purpose
         span.setAttribute("onclick", "displayModal3(this)");
 
         span.appendChild(plus);
