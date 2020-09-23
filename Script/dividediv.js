@@ -150,7 +150,7 @@ function widthRange(modalInput){
 
 }
 
-function addComponent() {
+function addImage() {
 
     var imgLink = prompt("Source Link of the image:");
 
@@ -167,6 +167,61 @@ function addComponent() {
     image.setAttribute("width", "100%");
 
     getElement.append(image);
+
+}
+
+function addVideo() {
+
+    var videoLink = prompt("Source Link of the video:");
+
+    modal4.style.display = "none";
+
+    var getID = getSpan.className;
+    var getElement = document.getElementById(getID);
+
+    getElement.innerHTML = '<video src="' + videoLink + '" width="100%" controls></video>';
+
+}
+
+function addParagraph() {
+
+    var paragraph = prompt("Enter Text:");
+
+    modal4.style.display = "none";
+
+    var getID = getSpan.className;
+    var getElement = document.getElementById(getID);
+
+    getElement.innerHTML = '';
+
+    var text = document.createTextNode(paragraph)
+
+    var p = document.createElement("p");
+
+    p.appendChild(text)
+
+    getElement.append(p);
+
+}
+
+function addHeading() {
+
+    var heading = prompt("Enter Heading Text:");
+
+    modal4.style.display = "none";
+
+    var getID = getSpan.className;
+    var getElement = document.getElementById(getID);
+
+    getElement.innerHTML = '';
+
+    var text = document.createTextNode(heading)
+
+    var h2 = document.createElement("h2");
+
+    h2.appendChild(text)
+
+    getElement.append(h2);
 
 }
 
